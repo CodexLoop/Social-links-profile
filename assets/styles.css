@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+/* GLOBAL VARIABLE */
+
+:root{
+    /* Colors */
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --grey-dark: hsl(0, 0%, 12%);
+    --grey-darker: hsl(0, 0%, 8%);
+
+    /* Typography */
+    --font: 'MyCustomFont', sans-serif;
+
+    /* Font Sizes */
+    --small-copy: 12px;
+    --body-copy: 14px;
+    --large-copy: 20px;
+
+    /* Font Weight */
+    --thin-font: 350;
+    --regular-font: 450;
+    --bold-font: 550;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--grey-darker);
+    font-family: var(--font);
+    font-size: var(--body-copy);
+    font-weight: 500;
+    color: var(--white);
+}
+
+.container{
+    width: 80%;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+li {
+    list-style: none;
+}
+
+
+/* MAIN SECTION: ==============================================*/
+
+
+/* Card-Section */
+.card__container{
+    display: flex;
+    margin: auto;
+    height: 100dvh;
+
+    justify-content: center;
+    color: var(--white);
+    font-weight: var(--regular-font);
+}
+
+.card__section{
+    margin: auto;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 250px;
+
+    border-radius: 5px;
+    background-color: var(--grey-dark);
+    text-align: center;
+}
+
+.card__image img{
+    border-radius: 50%;
+    width: 75px;
+    margin-block: 0 1rem;
+}
+
+.card__username h1{
+    font-weight: var(--bold-font);
+    font-size: var(--large-copy);
+    margin-block: 5px;
+}
+
+.card__locations{
+    color: var(--green);
+    margin-block: .1rem 1.5rem;
+    font-size: var(--small-copy);
+}
+
+.card__caption{
+    font-weight: var(--thin-font);
+    font-size: var(--small-copy);
+}
+
+.card__links{
+    margin-block: 1.2rem 0;
+    font-size: var(--small-copy);
+}
+
+.card__links ul{
+    display: flex;
+    gap: var(--body-copy);
+    flex-direction: column;
+}
+
+.card__links li{
+    background-color: var(--grey);
+    font-weight: var(--bold-font);
+
+    padding-block: var(--small-copy);
+    border-radius: 6px;
+}
